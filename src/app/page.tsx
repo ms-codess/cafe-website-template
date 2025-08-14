@@ -1,103 +1,134 @@
-import Image from "next/image";
+import Image from 'next/image'
+import Link from 'next/link'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-cream via-rose/20 to-gold/10">
+        <div className="container text-center z-10">
+          <h1 className="font-serif text-6xl md:text-8xl font-bold text-espresso mb-6">
+            Café Miracle
+          </h1>
+          <p className="text-xl md:text-2xl text-ink mb-8 max-w-2xl mx-auto">
+            Coffee, Mediterranean bites & local art on Beechwood
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/menu" 
+              className="btn btn-primary text-lg px-8 py-3"
+            >
+              View Menu
+            </Link>
+            <Link 
+              href="/reservations" 
+              className="btn btn-ghost text-lg px-8 py-3"
+            >
+              Make Reservation
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        <div className="absolute inset-0 bg-espresso/5"></div>
+      </section>
+
+      {/* About Section */}
+      <section className="section bg-white">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mb-6">
+                Welcome to Beechwood's Hidden Gem
+              </h2>
+              <p className="text-lg text-ink mb-6 leading-relaxed">
+                Nestled in the heart of Beechwood, Café Miracle brings you the perfect blend of 
+                artisanal coffee, authentic Mediterranean cuisine, and a vibrant space for local artists.
+              </p>
+              <p className="text-lg text-ink mb-8 leading-relaxed">
+                Every cup tells a story, every bite carries tradition, and every visit connects you 
+                to our community's creative spirit.
+              </p>
+              <Link href="/about" className="btn btn-primary">
+                Learn More
+              </Link>
+            </div>
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-soft">
+              <div className="absolute inset-0 bg-gradient-to-br from-leaf/20 to-gold/20"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-4xl text-espresso/60">☕</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Menu Preview */}
+      <section className="section bg-cream">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mb-6">
+              Our Menu
+            </h2>
+            <p className="text-xl text-ink max-w-2xl mx-auto">
+              From freshly roasted coffee to authentic Mediterranean dishes
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="card text-center">
+              <div className="text-4xl mb-4">☕</div>
+              <h3 className="font-serif text-2xl font-bold text-espresso mb-3">Coffee & Drinks</h3>
+              <p className="text-ink mb-4">
+                Single-origin beans, expertly roasted and brewed to perfection
+              </p>
+              <Link href="/menu#drinks" className="text-leaf hover:underline">
+                View Selection →
+              </Link>
+            </div>
+            
+            <div className="card text-center">
+              <div className="text-4xl mb-4">🥙</div>
+              <h3 className="font-serif text-2xl font-bold text-espresso mb-3">Mediterranean Bites</h3>
+              <p className="text-ink mb-4">
+                Fresh, authentic dishes inspired by Mediterranean traditions
+              </p>
+              <Link href="/menu#food" className="text-leaf hover:underline">
+                View Selection →
+              </Link>
+            </div>
+            
+            <div className="card text-center">
+              <div className="text-4xl mb-4">🎨</div>
+              <h3 className="font-serif text-2xl font-bold text-espresso mb-3">Local Art</h3>
+              <p className="text-ink mb-4">
+                Rotating exhibitions featuring Ottawa's talented artists
+              </p>
+              <Link href="/art" className="text-leaf hover:underline">
+                View Gallery →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="section bg-espresso text-white">
+        <div className="container text-center">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+            Visit Us Today
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Experience the magic of Café Miracle in the heart of Beechwood
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="btn bg-white text-espresso hover:bg-cream">
+              Get Directions
+            </Link>
+            <Link href="/reservations" className="btn btn-ghost border-white text-white hover:bg-white/10">
+              Book a Table
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
 }
