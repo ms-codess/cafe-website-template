@@ -6,13 +6,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        espresso: '#2A2322',
-        cream: '#F4EFE8',
-        rose: '#E5C2B8',
-        leaf: '#2D6B5A',
-        gold: '#C6A15B',
-        ink: '#1F2937',
-        white: '#ffffff',
+        espresso: '#2A2322',   // headings / lines
+        cream: '#F4EFE8',      // page background
+        ink: '#1F2937',        // body text
+        rose: '#E5C2B8',       // soft section bg / badges
+        leaf: '#2D6B5A',       // primary buttons / links
+        gold: '#C6A15B',       // accents / dividers
       },
       fontFamily: {
         sans: ['var(--font-sans)'],

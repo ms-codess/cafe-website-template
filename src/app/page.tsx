@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-cream">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-cream via-rose/20 to-gold/10">
         <div className="container text-center z-10">
@@ -62,7 +62,7 @@ export default function HomePage() {
       </section>
 
       {/* Menu Preview */}
-      <section className="section bg-cream">
+      <section className="section bg-rose/10">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mb-6">
@@ -75,7 +75,7 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="card text-center">
-              <div className="text-4xl mb-4">☕</div>
+              <div className="text-4xl mb-4 text-gold">☕</div>
               <h3 className="font-serif text-2xl font-bold text-espresso mb-3">Coffee & Drinks</h3>
               <p className="text-ink mb-4">
                 Single-origin beans, expertly roasted and brewed to perfection
@@ -86,7 +86,7 @@ export default function HomePage() {
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl mb-4">🥙</div>
+              <div className="text-4xl mb-4 text-gold">🥙</div>
               <h3 className="font-serif text-2xl font-bold text-espresso mb-3">Mediterranean Bites</h3>
               <p className="text-ink mb-4">
                 Fresh, authentic dishes inspired by Mediterranean traditions
@@ -97,7 +97,7 @@ export default function HomePage() {
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl mb-4">🎨</div>
+              <div className="text-4xl mb-4 text-gold">🎨</div>
               <h3 className="font-serif text-2xl font-bold text-espresso mb-3">Local Art</h3>
               <p className="text-ink mb-4">
                 Rotating exhibitions featuring Ottawa's talented artists
