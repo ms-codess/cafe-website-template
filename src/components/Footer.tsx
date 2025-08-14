@@ -49,11 +49,6 @@ export default function Footer() {
                   Art Gallery
                 </Link>
               </li>
-              <li>
-                <Link href="/reservations" className="text-rose hover:text-gold transition-colors">
-                  Reservations
-                </Link>
-              </li>
             </ul>
           </div>
 

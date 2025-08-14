@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import Logo from './Logo'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,8 +12,9 @@ export default function Header() {
       <div className="container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="font-serif text-2xl font-bold text-espresso">
-            Café Miracle
+          <Link href="/" className="flex items-center gap-3">
+            <Logo className="w-10 h-10" />
+            <span className="font-serif text-2xl font-bold text-espresso">Café Miracle</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -31,9 +33,6 @@ export default function Header() {
             </Link>
             <Link href="/contact" className="text-ink hover:text-leaf transition-colors">
               Contact
-            </Link>
-            <Link href="/reservations" className="btn btn-primary">
-              Book Table
             </Link>
           </nav>
 
@@ -89,13 +88,6 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </Link>
-              <Link 
-                href="/reservations" 
-                className="btn btn-primary w-full justify-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Book Table
               </Link>
             </div>
           </nav>
