@@ -20,6 +20,9 @@ export default function Header() {
             <Link href="/menu" className="text-ink hover:text-leaf transition-colors">
               Menu
             </Link>
+            <Link href="/events" className="text-ink hover:text-leaf transition-colors">
+              Events
+            </Link>
             <Link href="/about" className="text-ink hover:text-leaf transition-colors">
               About
             </Link>
@@ -58,6 +61,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Menu
+              </Link>
+              <Link 
+                href="/events" 
+                className="text-ink hover:text-leaf transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Events
               </Link>
               <Link 
                 href="/about" 
