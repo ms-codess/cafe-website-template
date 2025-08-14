@@ -1,26 +1,18 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+::selection { background: #E5C2B8; color: #2A2322; }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+.container { @apply mx-auto max-w-6xl px-4; }
+.section   { @apply py-16 md:py-24; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.btn { @apply inline-flex items-center gap-2 rounded-2xl px-4 py-2 font-medium shadow-soft
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-leaf; }
+.btn-primary { @apply bg-leaf text-white hover:opacity-90; }
+.btn-ghost   { @apply border border-espresso/20 text-espresso hover:bg-espresso/5; }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+.card { @apply rounded-2xl bg-white p-6 shadow-soft; }
+
+a { @apply underline-offset-2; }
+a:hover { @apply underline; }
