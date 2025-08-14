@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Custom color rules */
 ::selection { 
@@ -17,7 +19,7 @@
 
 /* Button components */
 .btn { 
-  @apply inline-flex items-center gap-2 rounded-2xl px-4 py-2 font-medium shadow-soft
+  @apply inline-flex items-center gap-2 rounded-2xl px-4 py-2 font-medium shadow-lg
          focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-leaf; 
 }
 
@@ -31,7 +33,7 @@
 
 /* Card component */
 .card { 
-  @apply rounded-2xl bg-white p-6 shadow-soft; 
+  @apply rounded-2xl bg-white p-6 shadow-lg; 
 }
 
 /* Link styling */
