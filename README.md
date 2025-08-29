@@ -1,9 +1,8 @@
 <div align="center">
-  <img src="public/cafe-logo.jpg" alt="Café Miracle Logo" width="120" height="120" style="border-radius: 50%; border: 4px solid #f5f5f4; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
   
-  # ☕ Café Miracle
+  # ☕ Coffee Shop Website Template
   
-  ### *A warm corner for coffee & miracles*
+  ### *A modern, responsive template for coffee shops and cafés*
   
   [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
@@ -15,14 +14,15 @@
 
 ## ✨ **About the Project**
 
-**Café Miracle** is a modern, responsive website that brings the warmth and charm of a local café to the digital world. Built with cutting-edge web technologies, it offers an immersive experience that combines beautiful design with practical functionality.
+**Coffee Shop Website Template** is a modern, responsive website template designed specifically for coffee shops, cafés, and bakeries. Built with cutting-edge web technologies, it offers a professional foundation that can be easily customized for any coffee business.
 
 ### 🌟 **Key Features**
 - **🎨 Responsive Design** - Beautiful on all devices
 - **🛒 Interactive Menu** - Integrated ordering system with cart
-- **☕ Coffee Focus** - Dedicated to coffee lovers and café culture
+- **☕ Coffee Focus** - Dedicated to coffee shops and café culture
 - **🚀 Performance** - Built with Next.js for optimal speed
 - **📱 Mobile First** - Designed for modern mobile experiences
+- **🔧 Easy Customization** - Simple to modify for your business
 
 ---
 
@@ -42,7 +42,7 @@
 ## 🎯 **Project Structure**
 
 ```
-cafe-miracle/
+coffee-shop-template/
 ├── 🎨 src/
 │   ├── 📱 app/
 │   │   ├── page.tsx          # Main landing page
@@ -71,10 +71,10 @@ cafe-miracle/
 
 ```bash
 # 🍴 Clone the repository
-git clone https://github.com/yourusername/cafe-miracle.git
+git clone https://github.com/yourusername/coffee-shop-template.git
 
 # 📁 Navigate to project directory
-cd cafe-miracle
+cd coffee-shop-template
 
 # 📦 Install dependencies
 npm install
@@ -108,7 +108,7 @@ Navigate to [http://localhost:3000](http://localhost:3000) to see your local dev
 
 ## 🛒 **Ordering System**
 
-The website features a comprehensive ordering system that includes:
+The template includes a comprehensive ordering system that can be customized for any coffee shop:
 
 - **📋 Category Filters** - Browse by coffee, food, or pastries
 - **🛒 Add to Cart** - Interactive buttons for each menu item
@@ -118,22 +118,9 @@ The website features a comprehensive ordering system that includes:
 
 ---
 
-## 📍 **Location & Hours**
-
-<div align="center">
-
-**🏠 Address:** 141 Beechwood Avenue, Ottawa, ON  
-**⏰ Hours:** Everyday 7AM-7PM, Sunday 7AM-5PM  
-**📞 Phone:** (613) 555-0123  
-**📧 Email:** info@cafemiracle.com
-
-</div>
-
----
-
 ## 🌿 **Branch Strategy**
 
-This project follows a feature-based branching strategy:
+This project follows a feature-based branching strategy for organized development:
 
 <div align="center">
 
@@ -178,7 +165,7 @@ We welcome contributions! Here's how to get started:
 ```bash
 # 🍴 Fork the repository
 # 📥 Clone your fork
-git clone https://github.com/yourusername/cafe-miracle.git
+git clone https://github.com/yourusername/coffee-shop-template.git
 
 # 🌿 Create a feature branch
 git checkout -b feature/AmazingFeature
@@ -202,39 +189,34 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## 👥 **Team**
+## 🎯 **Customization Guide**
 
-<div align="center">
+### **Easy to Customize For Your Business:**
+- **Business Name**: Update in Header.tsx and page.tsx
+- **Menu Items**: Modify the menu data in page.tsx
+- **Colors**: Update Tailwind config and CSS variables
+- **Images**: Replace images in the public folder
+- **Contact Info**: Update contact details in the contact section
+- **Hours**: Modify operating hours throughout the site
 
-| **Role** | **Name** |
-|:---------|:---------|
-| 🎨 **Design & Development** | [Your Name] |
-| ☕ **Café Owner** | Café Miracle Team |
-| 🚀 **Special Thanks** | Next.js, Tailwind CSS, Open Source Community |
-
-</div>
-
----
-
-## 📞 **Contact & Support**
-
-<div align="center">
-
-**🌐 Website:** [cafemiracle.com](https://cafemiracle.com)  
-**📧 Email:** info@cafemiracle.com  
-**📱 Phone:** (613) 555-0123  
-**📍 Address:** 141 Beechwood Avenue, Ottawa, ON
-
-</div>
+### **What You Can Change:**
+- ✅ Business name and branding
+- ✅ Menu items and prices
+- ✅ Color scheme and styling
+- ✅ Images and logos
+- ✅ Contact information
+- ✅ Operating hours
+- ✅ Location details
+- ✅ Social media links
 
 ---
 
 <div align="center">
 
-**Made with ❤️ and ☕ for the Café Miracle community**
+**Made with ❤️ and ☕ for the coffee shop community**
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/cafe-miracle?style=social)](https://github.com/yourusername/cafe-miracle)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/cafe-miracle?style=social)](https://github.com/yourusername/cafe-miracle)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/cafe-miracle)](https://github.com/yourusername/cafe-miracle)
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/coffee-shop-template?style=social)](https://github.com/yourusername/coffee-shop-template)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/coffee-shop-template?style=social)](https://github.com/yourusername/coffee-shop-template)
+[![GitHub issues](https://img.shields.io/github/issues/yourusername/coffee-shop-template)](https://github.com/yourusername/coffee-shop-template)
 
 </div>
