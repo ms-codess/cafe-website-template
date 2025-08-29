@@ -780,7 +780,7 @@ export default function HomePage() {
                         <strong>Sunday:</strong> 7:00 AM - 5:00 PM
                       </p>
                       <p className="text-sm text-wenge-600 mt-2">
-                        Orders are typically ready in 15-20 minutes. We'll call you when it's ready!
+                        Orders are typically ready in 15-20 minutes. We&apos;ll call you when it&apos;s ready!
                       </p>
                     </div>
                     
@@ -1071,7 +1071,7 @@ export default function HomePage() {
                   Come experience the magic of Café Miracle in the heart of Ottawa
                 </p>
                 <p className="text-lg text-wenge-700 mb-8 leading-relaxed">
-                  We're more than just a café - we're a creative hub where artists, coffee lovers, and dreamers come together.
+                  We&apos;re more than just a café - we&apos;re a creative hub where artists, coffee lovers, and dreamers come together.
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-rose-taupe/20 rounded-full flex items-center justify-center">
@@ -1192,7 +1192,7 @@ export default function HomePage() {
               Join Our Team! 🚀
             </h2>
             <p className="text-lg text-wenge-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-              We're looking for passionate baristas, creative souls, and coffee enthusiasts 
+              We&apos;re looking for passionate baristas, creative souls, and coffee enthusiasts 
               who want to be part of something magical. No experience needed - just bring your heart!
             </p>
             </div>
@@ -1211,7 +1211,7 @@ export default function HomePage() {
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
-                  <h4 className="font-semibold text-wenge mb-3 text-lg">What You'll Do:</h4>
+                  <h4 className="font-semibold text-wenge mb-3 text-lg">What You&apos;ll Do:</h4>
                   <ul className="space-y-2 text-wenge-700">
                     <li className="flex items-start gap-2">
                       <span className="text-rose-taupe">•</span>
@@ -1303,7 +1303,7 @@ export default function HomePage() {
                   </a>
                 </div>
                 <p className="text-sm text-wenge-600">
-                  Send your resume and a brief message about why you'd love to join our team!
+                  Send your resume and a brief message about why you&apos;d love to join our team!
                 </p>
               </div>
             </div>
