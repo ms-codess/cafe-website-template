@@ -97,13 +97,13 @@ export default function HomePage() {
           </p>
           
                       <div className="flex justify-center">
-              <Link
-                href="#menu"
+            <Link 
+              href="#menu" 
                 className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 View Menu & Order
-              </Link>
-            </div>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -132,7 +132,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 max-w-6xl">
           <div className="bg-seashell/90 backdrop-blur-sm rounded-3xl p-12 border border-desert-sand-200 shadow-lg">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-wenge mb-8 font-serif">
                 Our Story
@@ -157,8 +157,8 @@ export default function HomePage() {
                   className="object-cover"
                 />
               </div>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -183,7 +183,7 @@ export default function HomePage() {
               className="object-cover"
             />
           </div>
-        </div>
+          </div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 max-w-6xl">
@@ -204,16 +204,16 @@ export default function HomePage() {
               
               <div className="relative">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
+            <Image
                     src="/bakery-counter-display.jpg.webp"
                     alt="Bakery Counter Display - Our Beautiful Pastries"
-                    fill
-                    className="object-cover"
-                  />
+              fill
+              className="object-cover"
+            />
                 </div>
-              </div>
-            </div>
-            
+          </div>
+        </div>
+        
             {/* Category Filters */}
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <button 
@@ -256,8 +256,8 @@ export default function HomePage() {
               >
                 🍰 Mediterranean Bites
               </button>
-            </div>
-
+          </div>
+          
             {/* Menu Items */}
             <div className="space-y-6">
             <div>
@@ -275,10 +275,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$5.50</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Turkish Coffee', 5.50, 'Traditional brewing method')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -290,10 +290,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$3.50</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Espresso', 3.50, 'Single shot of premium espresso')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -305,10 +305,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$4.50</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Cappuccino', 4.50, 'Espresso with steamed milk & foam')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -320,10 +320,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$4.75</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Latte', 4.75, 'Espresso with steamed milk')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -335,10 +335,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$5.25</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Mocha', 5.25, 'Espresso with chocolate & milk')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -355,7 +355,7 @@ export default function HomePage() {
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
                     >
                       Add to Cart
-                    </button>
+                </button>
                   </div>
                 </div>
               </div>
@@ -377,10 +377,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$8.50</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Velvet Baklava', 8.50, 'Rich chocolate with pistachios')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -392,10 +392,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$7.50</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('CoCoLoco', 7.50, 'Lemon poppy seed cake')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -407,10 +407,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$6.75</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Miracita', 6.75, 'Cherry yogurt danish')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -422,10 +422,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$8.75</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Spinach Borek', 8.75, 'Phyllo with spinach & feta')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -442,7 +442,7 @@ export default function HomePage() {
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
                     >
                       Add to Cart
-                    </button>
+                </button>
                   </div>
                 </div>
               </div>
@@ -464,10 +464,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$10.25</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Falafel Wrap', 10.25, 'Crispy falafel with tahini sauce')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -479,10 +479,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$13.75</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Mediterranean Club', 13.75, 'Turkey, hummus, cucumber, tomato')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -494,10 +494,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$11.50</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Veggie Delight', 11.50, 'Fresh vegetables with avocado spread')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -509,10 +509,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$14.25</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Chicken Shawarma', 14.25, 'Marinated chicken with garlic sauce')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -529,7 +529,7 @@ export default function HomePage() {
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
                     >
                       Add to Cart
-                    </button>
+                </button>
                   </div>
                 </div>
               </div>
@@ -551,10 +551,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$16.50</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Turkish Breakfast', 16.50, 'Olives, cheese, tomatoes, eggs')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -566,10 +566,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$13.75</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Avocado Toast', 13.75, 'Sourdough with avocado & poached egg')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -581,10 +581,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$15.25</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Shakshuka', 15.25, 'Eggs poached in tomato sauce')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -596,10 +596,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$12.50</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Berry Pancakes', 12.50, 'Fluffy pancakes with fresh berries')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -611,10 +611,10 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$10.75</span>
-                    <button 
+                <button 
                       onClick={() => addToCart('Greek Yogurt Bowl', 10.75, 'Yogurt with honey, nuts & fruits')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                    >
+                >
                       Add to Cart
                     </button>
                   </div>
@@ -631,12 +631,12 @@ export default function HomePage() {
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
                     >
                       Add to Cart
-                    </button>
+                </button>
                   </div>
                 </div>
               </div>
+              </div>
             </div>
-          </div>
           </div>
 
           {/* Shopping Cart & Order Form */}
@@ -827,17 +827,17 @@ export default function HomePage() {
                 </div>
               )}
               
-              <button 
-                onClick={() => setShowCart(true)}
-                disabled={cart.length === 0}
+            <button 
+              onClick={() => setShowCart(true)}
+              disabled={cart.length === 0}
                 className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${
-                  cart.length === 0 
-                    ? 'bg-desert-sand-300 text-desert-sand-500 cursor-not-allowed' 
+                cart.length === 0 
+                  ? 'bg-desert-sand-300 text-desert-sand-500 cursor-not-allowed' 
                     : 'bg-rose-taupe hover:bg-rose-taupe-700 text-white hover:shadow-xl'
-                }`}
-              >
-                {cart.length === 0 ? 'Add Items to Cart' : `View Cart (${cart.length} items)`}
-              </button>
+              }`}
+            >
+              {cart.length === 0 ? 'Add Items to Cart' : `View Cart (${cart.length} items)`}
+            </button>
             </div>
           </div>
         </div>
@@ -935,8 +935,8 @@ export default function HomePage() {
           </div>
           <div className="relative overflow-hidden">
             <Image
-              src="/milkmirice.jpg.PNG"
-              alt="Milk Miracle"
+              src="/latte-art-mug.jpg.webp"
+              alt="Latte Art"
               fill
               className="object-cover"
             />
@@ -981,11 +981,11 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-wenge mb-8 font-serif">
-                  Events & Workshops
-                </h2>
+              Events & Workshops
+            </h2>
                 <p className="text-lg text-wenge-700 mb-6 leading-relaxed">
-                  Join our vibrant community for creative workshops, coffee classes, and cultural events
-                </p>
+              Join our vibrant community for creative workshops, coffee classes, and cultural events
+            </p>
                 <p className="text-lg text-wenge-700 mb-8 leading-relaxed">
                   Discover new skills, meet fellow coffee enthusiasts, and immerse yourself in our creative community.
                 </p>
@@ -1002,7 +1002,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-            </div>
+          </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-seashell/90 backdrop-blur-sm rounded-2xl p-8 border border-desert-sand-200 shadow-sm hover:shadow-md transition-shadow">
@@ -1057,7 +1057,7 @@ export default function HomePage() {
               className="object-cover"
             />
           </div>
-        </div>
+          </div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 max-w-6xl">
@@ -1076,29 +1076,29 @@ export default function HomePage() {
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-rose-taupe/20 rounded-full flex items-center justify-center">
                     <span className="text-3xl">📍</span>
-                  </div>
+          </div>
                   <div className="w-16 h-16 bg-rose-taupe/20 rounded-full flex items-center justify-center">
                     <span className="text-2xl">☕</span>
-                  </div>
+          </div>
                   <div className="w-16 h-16 bg-rose-taupe/20 rounded-full flex items-center justify-center">
                     <span className="text-2xl">🎨</span>
-                  </div>
-                </div>
-              </div>
+          </div>
+          </div>
+          </div>
               
               <div className="relative">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
+            <Image
                     src="/cafe-exterior.jpg.webp"
                     alt="Café Exterior - Our Beautiful Location"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-            
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="bg-seashell/90 backdrop-blur-sm rounded-2xl p-8 border border-desert-sand-200 shadow-lg">
                 <h3 className="text-2xl font-bold text-wenge mb-6">Location & Hours</h3>
@@ -1136,7 +1136,7 @@ export default function HomePage() {
                       title="Café Miracle Location"
                       className="w-full h-full"
                     ></iframe>
-                  </div>
+                </div>
                   <div className="text-center mt-3">
                     <a
                       href="https://maps.google.com/?q=141+Beechwood+Avenue+Ottawa+ON"
@@ -1147,15 +1147,15 @@ export default function HomePage() {
                       <span>Open in Google Maps</span>
                       <span>→</span>
                     </a>
-                  </div>
-                </div>
-                
-
               </div>
             </div>
             
 
-          </div>
+                  </div>
+                </div>
+                
+
+            </div>
           </div>
         </div>
       </section>
@@ -1188,13 +1188,13 @@ export default function HomePage() {
         <div className="relative z-10 container mx-auto px-4 max-w-4xl">
           <div className="bg-seashell/90 backdrop-blur-sm rounded-3xl p-12 border border-desert-sand-200 shadow-lg">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-wenge mb-6 font-serif">
-                Join Our Team! 🚀
-              </h2>
-              <p className="text-lg text-wenge-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-                We're looking for passionate baristas, creative souls, and coffee enthusiasts 
-                who want to be part of something magical. No experience needed - just bring your heart!
-              </p>
+            <h2 className="text-4xl font-bold text-wenge mb-6 font-serif">
+              Join Our Team! 🚀
+            </h2>
+            <p className="text-lg text-wenge-700 mb-8 leading-relaxed max-w-2xl mx-auto">
+              We're looking for passionate baristas, creative souls, and coffee enthusiasts 
+              who want to be part of something magical. No experience needed - just bring your heart!
+            </p>
             </div>
 
             {/* Barista Job Posting */}
