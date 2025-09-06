@@ -3,11 +3,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import Header from '@/components/Header'
 
 export default function HomePage() {
   const [cart, setCart] = useState<Array<{name: string, price: number, description: string, quantity: number}>>([]);
   const [showCart, setShowCart] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [showAddedToCart, setShowAddedToCart] = useState(false);
+  const [addedItemName, setAddedItemName] = useState('');
   const [customerInfo, setCustomerInfo] = useState({
     name: '',
     phone: '',
@@ -16,6 +19,7 @@ export default function HomePage() {
   });
 
   const addToCart = (name: string, price: number, description: string) => {
+    console.log('Adding to cart:', name, price, description);
     setCart(prevCart => {
       const existingItem = prevCart.find(item => item.name === name);
       if (existingItem) {
@@ -28,6 +32,10 @@ export default function HomePage() {
       return [...prevCart, { name, price, description, quantity: 1 }];
     });
     setShowCart(true);
+    setAddedItemName(name);
+    setShowAddedToCart(true);
+    setTimeout(() => setShowAddedToCart(false), 3000);
+    console.log('Cart should be visible now, showCart state:', true);
   };
 
   const removeFromCart = (name: string) => {
@@ -60,12 +68,27 @@ export default function HomePage() {
   };
 
   return (
+    <>
+      <Header />
     <main className="min-h-screen bg-seashell">
+        {/* Floating Cart Button */}
+      {cart.length > 0 && (
+        <button
+          onClick={() => setShowCart(true)}
+          className="fixed top-4 left-4 z-40 bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transition-all duration-300 transform hover:scale-105"
+        >
+          <span className="text-lg">🛒</span>
+          <span className="font-semibold">View Cart ({cart.length})</span>
+        </button>
+      )}
+
+
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/coffeee.jpg"
+            src="/header.png"
             alt="Café Miracle - Beautiful Coffee"
             fill
             className="object-cover"
@@ -109,24 +132,14 @@ export default function HomePage() {
 
       {/* About Section */}
       <section id="about" className="py-20 relative overflow-hidden">
-        {/* Background Photo Collage */}
-        <div className="absolute inset-0 grid grid-cols-2 gap-2 opacity-20">
-          <div className="relative overflow-hidden">
-            <Image
-              src="/cafe-interior-window.jpg.webp"
-              alt="Coffee Window"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/turkish-coffee-pour.jpg.jpg"
-              alt="Turkish Coffee"
-              fill
-              className="object-cover"
-            />
-          </div>
+        {/* Background Photos */}
+        <div className="absolute inset-0 opacity-70">
+          <Image
+            src="/wallpaper.png"
+            alt="Wallpaper"
+            fill
+            className="object-cover object-top"
+          />
         </div>
         
         {/* Content */}
@@ -154,7 +167,7 @@ export default function HomePage() {
                   src="/cafe-exterior.jpg.webp"
                   alt="Café Miracle Exterior - Our Beautiful Cafe Building"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
               </div>
               </div>
@@ -165,25 +178,27 @@ export default function HomePage() {
 
       {/* Menu Section */}
       <section id="menu" className="py-20 relative overflow-hidden">
-        {/* Background Photo Collage */}
-        <div className="absolute inset-0 grid grid-cols-2 gap-2 opacity-20">
+        {/* Background Photos */}
+        <div className="absolute inset-0 grid grid-rows-2 opacity-70">
           <div className="relative overflow-hidden">
             <Image
-              src="/baklava-display.jpg.jpg"
-              alt="Baklava Display"
+              src="/wallpaper.png"
+              alt="Wallpaper"
               fill
-              className="object-cover"
+              className="object-cover object-center"
+              style={{ objectPosition: '0% 25%' }}
             />
           </div>
           <div className="relative overflow-hidden">
             <Image
-              src="/coffee-baklava.jp.jpg"
-              alt="Coffee and Baklava"
+              src="/wallpaper.png"
+              alt="Wallpaper"
               fill
-              className="object-cover"
+              className="object-cover object-center"
+              style={{ objectPosition: '0% 50%' }}
             />
           </div>
-          </div>
+        </div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 max-w-6xl">
@@ -208,7 +223,7 @@ export default function HomePage() {
                     src="/bakery-counter-display.jpg.webp"
                     alt="Bakery Counter Display - Our Beautiful Pastries"
               fill
-              className="object-cover"
+              className="object-cover object-center"
             />
                 </div>
           </div>
@@ -459,34 +474,19 @@ export default function HomePage() {
               <div className="space-y-2 text-left">
                 <div className="flex justify-between items-center py-2 border-b border-neutral-200 px-3">
                   <div>
-                    <span className="font-medium text-neutral-800">Falafel Wrap</span>
-                    <p className="text-neutral-600 text-sm">Crispy falafel with tahini sauce</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-neutral-700 font-bold text-lg">$10.25</span>
-                <button 
-                      onClick={() => addToCart('Falafel Wrap', 10.25, 'Crispy falafel with tahini sauce')}
-                      className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-neutral-200 px-3">
-                  <div>
                     <span className="font-medium text-neutral-800">Mediterranean Club</span>
                     <p className="text-neutral-600 text-sm">Turkey, hummus, cucumber, tomato</p>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$13.75</span>
                 <button 
-                      onClick={() => addToCart('Mediterranean Club', 13.75, 'Turkey, hummus, cucumber, tomato')}
+                  onClick={() => addToCart('Mediterranean Club', 13.75, 'Turkey, hummus, cucumber, tomato')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
                 >
                       Add to Cart
                     </button>
                   </div>
-                </div>
+                  </div>
                 <div className="flex justify-between items-center py-2 border-b border-neutral-200 px-3">
                   <div>
                     <span className="font-medium text-neutral-800">Veggie Delight</span>
@@ -641,8 +641,12 @@ export default function HomePage() {
 
           {/* Shopping Cart & Order Form */}
           {showCart && (
-            <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-              <div className="bg-seashell rounded-3xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-desert-sand-200">
+            <div 
+              className="fixed inset-0 bg-black/50 z-[99999] flex items-center justify-center p-4" 
+              onClick={(e) => e.target === e.currentTarget && setShowCart(false)}
+              style={{ zIndex: 99999 }}
+            >
+              <div className="bg-white rounded-3xl p-8 max-w-2xl w-full max-h-[85vh] overflow-y-auto border border-gray-200 shadow-2xl relative mx-4 my-4">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-2xl font-bold text-wenge">Your Order</h3>
                   <button 
@@ -773,7 +777,7 @@ export default function HomePage() {
                       </select>
                     </div>
 
-                                        <div className="bg-desert-sand-50 p-4 rounded-xl border border-desert-sand-200">
+                    <div className="bg-desert-sand-50 p-4 rounded-xl border border-desert-sand-200">
                       <h4 className="font-semibold text-wenge mb-2">Pickup Hours</h4>
                       <p className="text-sm text-wenge-700">
                         <strong>Everyday:</strong> 7:00 AM - 7:00 PM<br/>
@@ -802,6 +806,14 @@ export default function HomePage() {
                   </form>
                 )}
               </div>
+            </div>
+          )}
+
+          {/* Added to Cart Success Notification */}
+          {showAddedToCart && (
+            <div className="fixed top-20 right-4 z-[999999] bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 animate-pulse">
+              <span className="text-xl">✅</span>
+              <span className="font-semibold">{addedItemName} added to cart!</span>
             </div>
           )}
 
@@ -847,24 +859,15 @@ export default function HomePage() {
 
       {/* Miracle Jar Section */}
       <section className="py-20 relative overflow-hidden">
-        {/* Background Photo Collage */}
-        <div className="absolute inset-0 grid grid-cols-2 gap-2 opacity-20">
-          <div className="relative overflow-hidden">
-            <Image
-              src="/cafe-interior-window.jpg.webp"
-              alt="Coffee Window"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/turkish-coffee-pour.jpg.jpg"
-              alt="Turkish Coffee"
-              fill
-              className="object-cover"
-            />
-          </div>
+        {/* Background Photos */}
+        <div className="absolute inset-0 opacity-70">
+          <Image
+            src="/wallpaper.png"
+            alt="Wallpaper"
+            fill
+            className="object-cover object-center"
+            style={{ objectPosition: '0% 50%' }}
+          />
         </div>
         
         {/* Content */}
@@ -873,7 +876,7 @@ export default function HomePage() {
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
                 <Image
-                  src="/miracle-jar.jpg.jpg"
+                  src="/miracle-jar.jpg"
                   alt="The Miracle Jar - Take one, Leave one"
                   width={300}
                   height={300}
@@ -899,80 +902,15 @@ export default function HomePage() {
 
       {/* Events Section */}
       <section id="events" className="py-20 relative overflow-hidden">
-        {/* Background Photo Collage */}
-        <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-2 opacity-15">
-          <div className="relative overflow-hidden">
-            <Image
-              src="/cafe-interior-window.jpg.webp"
-              alt="Coffee Window"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/turkish-coffee-pour.jpg.jpg"
-              alt="Turkish Coffee"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/latte-art-mug.jpg.webp"
-              alt="Latte Art"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/savory-pastry-dip.jpg.webp"
-              alt="Savory Pastry"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/latte-art-mug.jpg.webp"
-              alt="Latte Art"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/baklava-display.jpg.jpg"
-              alt="Baklava Display"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/coffee-baklava.jp.jpg"
-              alt="Coffee and Baklava"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/bakery-counter.jpg.jpg"
-              alt="Bakery Counter"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/iced-latte-glass.jpg.webp"
-              alt="Iced Latte"
-              fill
-              className="object-cover"
-            />
-          </div>
+        {/* Background Photos */}
+        <div className="absolute inset-0 opacity-70">
+          <Image
+            src="/wallpaper.png"
+            alt="Wallpaper"
+            fill
+            className="object-cover object-center"
+            style={{ objectPosition: '0% 75%' }}
+          />
         </div>
         
         {/* Content */}
@@ -993,13 +931,25 @@ export default function HomePage() {
               </div>
               
               <div className="relative">
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/cafe-interior-window.jpg.webp"
-                    alt="Café Interior - Our Creative Space"
-                    fill
-                    className="object-cover"
-                  />
+                <div className="flex gap-6 items-center justify-center">
+                  <div className="w-28 h-28 rounded-lg overflow-hidden shadow-xl border-2 border-rose-taupe/30 hover:border-rose-taupe/60 transition-all duration-300 hover:scale-110">
+                    <Image
+                      src="/event.PNG"
+                      alt="Events & Workshops"
+                      width={112}
+                      height={112}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="w-28 h-28 rounded-lg overflow-hidden shadow-xl border-2 border-rose-taupe/30 hover:border-rose-taupe/60 transition-all duration-300 hover:scale-110">
+                    <Image
+                      src="/tiny.PNG"
+                      alt="Special Events"
+                      width={112}
+                      height={112}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
                 </div>
               </div>
           </div>
@@ -1039,25 +989,16 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 relative overflow-hidden">
-        {/* Background Photo Collage */}
-        <div className="absolute inset-0 grid grid-cols-2 gap-2 opacity-20">
-          <div className="relative overflow-hidden">
-            <Image
-              src="/cafe-exterior.jpg.webp"
-              alt="Café Exterior"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/bakery-counter.jpg.jpg"
-              alt="Bakery Counter"
-              fill
-              className="object-cover"
-            />
-          </div>
-          </div>
+        {/* Background Photos */}
+        <div className="absolute inset-0 opacity-70">
+          <Image
+            src="/wallpaper.png"
+            alt="Wallpaper"
+            fill
+            className="object-cover object-center"
+            style={{ objectPosition: '0% 100%' }}
+          />
+        </div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 max-w-6xl">
@@ -1092,7 +1033,7 @@ export default function HomePage() {
                     src="/cafe-exterior.jpg.webp"
                     alt="Café Exterior - Our Beautiful Location"
               fill
-              className="object-cover"
+              className="object-cover object-center"
             />
           </div>
         </div>
@@ -1160,32 +1101,21 @@ export default function HomePage() {
         </div>
       </section>
 
-
-
       {/* Join Our Team Section */}
-      <section id="careers" className="py-20 relative overflow-hidden">
-        {/* Background Photo Collage */}
-        <div className="absolute inset-0 grid grid-cols-2 gap-2 opacity-20">
-          <div className="relative overflow-hidden">
-            <Image
-              src="/cafe-interior-window.jpg.webp"
-              alt="Coffee Window"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative overflow-hidden">
-            <Image
-              src="/turkish-coffee-pour.jpg.jpg"
-              alt="Turkish Coffee"
-              fill
-              className="object-cover"
-            />
-          </div>
+      <section id="careers" className="relative overflow-hidden" style={{ marginTop: 0, marginBottom: 0, paddingTop: 0, paddingBottom: 0 }}>
+        {/* Background Photos */}
+        <div className="absolute inset-0 opacity-70">
+          <Image
+            src="/wallpaper.png"
+            alt="Wallpaper"
+            fill
+            className="object-cover object-center"
+            style={{ objectPosition: '0% 125%' }}
+          />
         </div>
         
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 max-w-4xl">
+        <div className="relative z-10 container mx-auto px-4 max-w-4xl py-20">
           <div className="bg-seashell/90 backdrop-blur-sm rounded-3xl p-12 border border-desert-sand-200 shadow-lg">
             <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-wenge mb-6 font-serif">
@@ -1311,6 +1241,6 @@ export default function HomePage() {
         </div>
       </section>
     </main>
+    </>
   )
 }
-
