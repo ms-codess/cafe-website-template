@@ -15,7 +15,7 @@ export default function HomePage() {
     name: '',
     phone: '',
     pickupTime: '',
-    pickupLocation: 'Café Miracle - 141 Beechwood Avenue'
+    pickupLocation: 'Café Brew - Main Street'
   });
 
   const addToCart = (name: string, price: number, description: string) => {
@@ -64,7 +64,7 @@ export default function HomePage() {
     alert(`Order submitted! Total: $${getTotalPrice().toFixed(2)}\nPickup at: ${customerInfo.pickupLocation}\nTime: ${customerInfo.pickupTime}`);
     setCart([]);
     setShowCart(false);
-    setCustomerInfo({ name: '', phone: '', pickupTime: '', pickupLocation: 'Café Miracle - 141 Beechwood Avenue' });
+    setCustomerInfo({ name: '', phone: '', pickupTime: '', pickupLocation: 'Café Brew - Main Street' });
   };
 
   return (
@@ -89,7 +89,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/header.png"
-            alt="Café Miracle - Beautiful Coffee"
+            alt="Café Brew - Beautiful Coffee"
             fill
             className="object-cover"
             priority
@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className="mb-8">
             <Image
               src="/cafe-logo.jpg"
-              alt="Café Miracle Logo"
+              alt="Café Brew Logo"
               width={120}
               height={120}
               className="mx-auto rounded-full border-4 border-seashell-200/40 shadow-2xl"
@@ -110,13 +110,13 @@ export default function HomePage() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif text-white">
-            Café Miracle
+            Café Brew
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/95 max-w-2xl mx-auto">
-            A warm corner for coffee & miracles
+            A warm corner for coffee & community
           </p>
           <p className="text-lg mb-12 text-white/90">
-            Artisan Coffee • Mediterranean Delights • Creative Workshops
+            Artisan Coffee • Fresh Pastries • Creative Workshops
           </p>
           
                       <div className="flex justify-center">
@@ -165,7 +165,7 @@ export default function HomePage() {
               <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/cafe-exterior.jpg.webp"
-                  alt="Café Miracle Exterior - Our Beautiful Cafe Building"
+                  alt="Café Brew Exterior - Our Beautiful Cafe Building"
                   fill
                   className="object-cover object-center"
                 />
@@ -360,13 +360,13 @@ export default function HomePage() {
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-neutral-200 px-3">
                   <div>
-                    <span className="font-medium text-neutral-800">Milk Miracle</span>
-                    <p className="text-neutral-600 text-sm">Our signature coffee creation</p>
+                    <span className="font-medium text-neutral-800">Signature Blend</span>
+                    <p className="text-neutral-600 text-sm">Our signature coffee blend</p>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-neutral-700 font-bold text-lg">$6.50</span>
                     <button 
-                      onClick={() => addToCart('Milk Miracle', 6.50, 'Our signature coffee creation')}
+                      onClick={() => addToCart('Signature Blend', 6.50, 'Our signature coffee blend')}
                       className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
                     >
                       Add to Cart
@@ -726,7 +726,7 @@ export default function HomePage() {
                           value={customerInfo.phone}
                           onChange={(e) => setCustomerInfo({...customerInfo, phone: e.target.value})}
                           className="w-full px-4 py-3 border border-desert-sand-300 rounded-xl focus:ring-2 focus:ring-rose-taupe focus:border-transparent"
-                          placeholder="(613) 555-0123"
+                          placeholder="(555) 123-4567"
                         />
                       </div>
                     </div>
@@ -740,9 +740,9 @@ export default function HomePage() {
                         onChange={(e) => setCustomerInfo({...customerInfo, pickupLocation: e.target.value})}
                         className="w-full px-4 py-3 border border-desert-sand-300 rounded-xl focus:ring-2 focus:ring-rose-taupe focus:border-transparent"
                       >
-                        <option value="Café Miracle - 141 Beechwood Avenue">Café Miracle - 141 Beechwood Avenue</option>
-                        <option value="Beechwood Mall Pickup">Beechwood Mall Pickup</option>
-                        <option value="Downtown Ottawa Pickup">Downtown Ottawa Pickup</option>
+                        <option value="Café Brew - Main Street">Café Brew - Main Street</option>
+                        <option value="Downtown Pickup">Downtown Pickup</option>
+                        <option value="Mall Pickup">Mall Pickup</option>
                       </select>
                     </div>
                     
@@ -857,7 +857,7 @@ export default function HomePage() {
 
 
 
-      {/* Miracle Jar Section */}
+      {/* Community Corner Section */}
       <section className="py-20 relative overflow-hidden">
         {/* Background Photos */}
         <div className="absolute inset-0 opacity-70">
@@ -877,7 +877,7 @@ export default function HomePage() {
               <div className="lg:w-1/2">
                 <Image
                   src="/miracle-jar.jpg"
-                  alt="The Miracle Jar - Take one, Leave one"
+                  alt="Community Corner - Take one, Leave one"
                   width={300}
                   height={300}
                   className="rounded-2xl shadow-lg border-2 border-desert-sand-200"
@@ -885,14 +885,14 @@ export default function HomePage() {
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
                 <h3 className="text-3xl font-bold text-wenge mb-6 font-serif">
-                  The Miracle Jar
+                  Community Corner
                 </h3>
                 <p className="text-lg text-wenge-700 leading-relaxed mb-4 font-medium">
-                  Take one. Leave one. A little magic, just when you need it...
+                  Take one. Leave one. A little kindness, just when you need it...
                 </p>
                 <p className="text-lg text-wenge-600 leading-relaxed">
-                  Our community jar filled with notes of hope, inspiration, and small miracles. 
-                  Share your blessing or take one when your heart needs lifting.
+                  Our community corner filled with notes of hope, inspiration, and encouragement. 
+                  Share your kindness or take one when your heart needs lifting.
                 </p>
               </div>
             </div>
@@ -1009,7 +1009,7 @@ export default function HomePage() {
                   Visit Us
                 </h2>
                 <p className="text-lg text-wenge-700 mb-6 leading-relaxed">
-                  Come experience the magic of Café Miracle in the heart of Ottawa
+                  Come experience the warmth of Café Brew in the heart of our community
                 </p>
                 <p className="text-lg text-wenge-700 mb-8 leading-relaxed">
                   We&apos;re more than just a café - we&apos;re a creative hub where artists, coffee lovers, and dreamers come together.
@@ -1046,7 +1046,7 @@ export default function HomePage() {
                 <div className="space-y-4 text-wenge-700 mb-8">
                   <div className="flex items-center gap-3">
                     <span className="text-rose-taupe text-xl">📍</span>
-                    <span>141 Beechwood Avenue, Ottawa, ON</span>
+                    <span>123 Main Street, Your City, ST 12345</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-rose-taupe text-xl">🕒</span>
@@ -1058,7 +1058,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-rose-taupe text-xl">📞</span>
-                    <span>(613) 555-0123</span>
+                    <span>(555) 123-4567</span>
                   </div>
                 </div>
                 
@@ -1067,20 +1067,20 @@ export default function HomePage() {
                   <h4 className="font-semibold text-wenge mb-3">Find Us</h4>
                   <div className="aspect-video rounded-xl overflow-hidden border border-desert-sand-200 shadow-lg">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8952587!2d-75.6974!3d45.4215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI1JzE3LjQiTiA3NcKwNDEnNTAuNiJX!5e0!3m2!1sen!2sca!4v1234567890"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1234567!2d-74.0059!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuMiJX!5e0!3m2!1sen!2sus!4v1234567890"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Café Miracle Location"
+                      title="Café Brew Location"
                       className="w-full h-full"
                     ></iframe>
                 </div>
                   <div className="text-center mt-3">
                     <a
-                      href="https://maps.google.com/?q=141+Beechwood+Avenue+Ottawa+ON"
+                      href="https://maps.google.com/?q=123+Main+Street+Your+City+ST+12345"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-rose-taupe hover:text-rose-taupe-700 transition-colors font-semibold text-sm"
@@ -1220,13 +1220,13 @@ export default function HomePage() {
               <div className="text-center">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                   <a 
-                    href="mailto:jobs@cafemiracle.com?subject=Barista%20Application" 
+                    href="mailto:jobs@cafebrew.com?subject=Barista%20Application" 
                     className="bg-rose-taupe hover:bg-rose-taupe-700 text-white px-8 py-3 rounded-xl transition-colors font-semibold shadow-lg transform hover:scale-105"
                   >
                     Apply Now
                   </a>
                   <a 
-                    href="mailto:jobs@cafemiracle.com?subject=Barista%20Inquiry" 
+                    href="mailto:jobs@cafebrew.com?subject=Barista%20Inquiry" 
                     className="bg-desert-sand-100 hover:bg-desert-sand-200 text-wenge px-8 py-3 rounded-xl transition-colors font-semibold border border-desert-sand-200"
                   >
                     Ask Questions
